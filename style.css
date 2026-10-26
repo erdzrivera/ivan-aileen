@@ -361,3 +361,30 @@ main { padding: 0 1.2rem 5rem; }
 .lb-next { right: 12px; top: 50%; margin-top: -23px; }
 .lb-count { position: absolute; bottom: 20px; font-family: var(--sans); font-size: .75rem; letter-spacing: .2em; color: var(--rose-light); }
 @keyframes fade { from { opacity: 0; } }
+
+/* ---------- Hashtag Styling ---------- */
+.wedding-tag {
+    font-family: var(--sans);
+    font-size: .82rem;
+    font-weight: 500;
+    letter-spacing: .22em;
+    color: var(--rose-light);
+    text-transform: uppercase;
+    margin: .3rem 0;
+    opacity: .95;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+}
+.side-tag {
+    font-family: var(--sans);
+    font-size: .7rem;
+    letter-spacing: .2em;
+    color: var(--rose-light);
+    margin: -.2rem 0 .4rem;
+    opacity: .88;
+}
+.footer-tag {
+    font-size: .95rem;
+    letter-spacing: .24em;
+    color: var(--rose-gold);
+    margin: .2rem 0 .8rem;
+}
