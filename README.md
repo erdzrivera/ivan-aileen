@@ -1,70 +1,43 @@
-# 💌 Template website undangan pernikahan sederhana
+# 💌 Ivan & Aileen Wedding Invitation
 
-![Thumbnail](/assets/images/banner.webp)
+Online wedding invitation for Ivan & Aileen · December 20, 2026.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/cef32dbf-f26f-4865-84a9-b85a439c9994/deploy-status)](https://app.netlify.com/sites/ulems/deploys)
-[![Hits](https://dikit.my.id/0b3y8q)](https://cie.my.id)
-[![GitHub repo size](https://img.shields.io/github/repo-size/dewanakl/undangan?color=brightgreen)](https://shields.io)
-[![GitHub License](https://img.shields.io/github/license/dewanakl/undangan?color=brightgreen)](https://shields.io)
+## 🚀 Local Development
 
-## 🚀 Demo
-Untuk kamu yang ingin melihat demo terlebih dahulu:
+Simply double-click `index.html` or run a local web server:
 
-[https://ulems.my.id/?to=Teman teman semua](https://ulems.my.id/?to=Teman%20teman%20semua)
+```bash
+# Optional local server
+npx serve .
+# or
+python -m http.server 8080
+```
 
-## 📦 Documentation
+## 🌐 Deploy to GitHub Pages
 
-* Jalankan perintah `npm install`, lalu `npm run dev`, dan buka `http://localhost:8080`.
-* Ubah isi file `index.html` sesuai keinginanmu.
-* Jika tidak ingin menggunakan **fitur komentar**, hapus atribut `data-url` dan `data-key` di elemen `<body>` pada index.html.
-* Sesuaikan `data-url` pada `<body>` di index dan dashboard sesuai dengan URL backend (jika kamu meng-hosting sendiri).
-* Sesuaikan juga `data-key` di index dengan access key yang bisa kamu ambil dari dashboard.
-* Jika ingin menggunakan GIF, dapatkan Tenor API key di [developers.google.com/tenor](https://developers.google.com/tenor/guides/quickstart).
-* Untuk deployment, jalankan `npm run build:public`. Folder `public` adalah yang akan kamu upload.
-* Untuk backend self-hosting, lihat penjelasan di bawah, atau gunakan **trial API** secara gratis.
+1. Create a new GitHub repository (e.g. `wedding` or `ivan-aileen`).
+2. Push this project to the `main` branch:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/<your-username>/<repo-name>.git
+   git push -u origin main
+   ```
+3. In GitHub, go to **Settings** → **Pages**.
+4. Under **Source**, choose **Deploy from a branch**.
+5. Select branch `main` and folder `/ (root)`, then click **Save**.
+6. In 1–2 minutes, your website will be live at:
+   `https://<your-username>.github.io/<repo-name>/`
 
-> Undangan ini hanya menggunakan HTML, CSS, dan JavaScript biasa. NPM digunakan agar file JavaScript bisa langsung dieksekusi (bukan bertipe module lagi).
+## 💌 Personalised Guest Links
 
-> Jika tetap ingin tanpa NPM, ubah `src="./dist/guest.js"` menjadi `src="./js/guest.js" type="module"` pada tag `<head>` di index dan dashboard.html, dengan risiko glitch tema di awal loading.
+Add `?to=Guest+Name` to the URL:
+```
+https://<your-username>.github.io/<repo-name>/?to=Daniel+Landicho
+```
 
-> Jika kamu punya pertanyaan, gunakan fitur `discussions` agar bisa dibaca juga oleh teman-teman lainnya.
+## 📝 RSVP Responses
 
-> [!WARNING]  
-> Gunakan versi 3.14.0, untuk versi 4 masih tahap pengembangan dan berpotensi teredapat bug 🐛
-
-## 🔥 Deployment API
-
-- Video\
-    otw
-
-- Presentation
-    [https://docs.google.com/presentation](https://docs.google.com/presentation/d/1EY2YmWdZUI7ASoo0f2wvU7ec_Yt0uZanYa8YLbfNysk/edit)
-
-## ⏰ Trial API
-Untuk kamu yang ingin mencoba secara gratis:
-
-[https://trial.ulems.my.id](https://trial.ulems.my.id)
-
-## ⚙️ Tech stack
-
-- Bootstrap 5.3.8
-- AOS 2.3.4
-- Fontawesome 7.1.0
-- Canvas Confetti 1.9.3
-- Google Fonts
-- Vanilla JS
-
-## 🎨 Credit
-All visual assets in this project are sourced from Pixabay.
-
-## 🤝 Contributing
-
-I'm very open to those of you who want to contribute to the undangan!
-
-## 🐞 Security Vulnerabilities
-
-If you find any security vulnerabilities in this undangan, please email DKL via [dewanakretarta29@gmail.com](mailto:dewanakretarta29@gmail.com).
-
-## 📜 License
-
-Undangan is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+RSVPs post directly to the connected Google Sheet via Google Apps Script (`apps-script.gs`).
