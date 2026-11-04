@@ -38,7 +38,7 @@ const FLOWER_GIRLS = [
     'Sara Ann I. Velarde', 'Anthonettee Calimag', 'Ritzy B. Arnibal', 'Karen G. Birata',
     'Jamaica C. Sangalang', 'Jane Claire D. Bulahan', 'Grace Ann Pangan', 'Irish Jade R. Constatino',
     'Ma. Cristina Beato', 'Roxanne L. Rivera', 'Manilyn Z. Pertez', 'Jeralyn S. Saluria',
-    'Mary Jhane O. Urizza', 'Estephanie Hermogeno', 'Shayne Ann C. Sancon', 'Cecil C. Paloma',
+    'Mary Jhane O. Urizza', 'Estephanie Hermogeno', 'Jessica J. Arnaldo', 'Cecil C. Paloma',
     'Abby Jedidia B. Pasco', 'Shammah P. Diaz',
 ];
 
@@ -61,7 +61,14 @@ if (guest) {
 // Lists
 const sp = $('sponsors');
 sp.append(el('p', 'Ninong', 'head'), el('p', 'Ninang', 'head'));
-SPONSORS.forEach(([m, f]) => sp.append(el('p', m), el('p', f)));
+SPONSORS.forEach(([m, f]) => {
+    if (m && f) {
+        sp.append(el('p', m), el('p', f));
+    } else {
+        const single = el('p', m || f, 'sponsor-single');
+        sp.append(single);
+    }
+});
 FLOWER_GIRLS.forEach((n) => $('flowers').append(el('li', n)));
 
 // Petals
@@ -91,7 +98,7 @@ music.addEventListener('pause', () => { musicBtn.classList.remove('playing'); mu
 // Open invitation
 $('open-btn').addEventListener('click', () => {
     music.volume = 0.6;
-    music.play().catch(() => {});
+    music.play().catch(() => { });
     musicBtn.hidden = false;
     $('cover').classList.add('opened');
     document.body.classList.remove('locked');
@@ -204,16 +211,12 @@ const form = formEl.elements;
 const status = $('rsvp-status');
 const setStatus = (msg, cls) => { status.textContent = msg; status.className = 'form-status ' + (cls || ''); };
 
-formEl.addEventListener('change', () => {
-    $('guests-wrap').style.display = form.attendance.value === 'Declines' ? 'none' : '';
-});
-
 formEl.addEventListener('submit', async (e) => {
     e.preventDefault();
     const data = {
         name: form.name.value.trim(),
         attendance: form.attendance.value,
-        guests: form.attendance.value === 'Declines' ? '0' : form.guests.value,
+        guests: form.guests ? form.guests.value : (form.attendance.value === 'Declines' ? '0' : '1'),
         message: form.message.value.trim(),
         submittedAt: new Date().toISOString(),
     };
@@ -237,7 +240,6 @@ formEl.addEventListener('submit', async (e) => {
             localStorage.setItem('rsvps', JSON.stringify(all));
         }
         formEl.reset();
-        $('guests-wrap').style.display = '';
         setStatus(data.attendance === 'Accepts'
             ? `Thank you, ${data.name}! We can't wait to see you.`
             : `Thank you, ${data.name}. You'll be missed!`, 'ok');

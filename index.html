@@ -1,22 +1,28 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ivan &amp; Aileen | Wedding Invitation · December 20, 2026</title>
-    <meta name="description" content="You are invited to the wedding of Ivan and Aileen on December 20, 2026, 4:00 PM at Terrazas de Teodorra, Brgy. Dita, City of Santa Rosa, Laguna. RSVP online.">
+    <meta name="description"
+        content="You are invited to the wedding of Ivan and Aileen on December 20, 2026, 4:00 PM at Terrazas de Teodorra, Brgy. Dita, City of Santa Rosa, Laguna. RSVP online.">
     <meta property="og:title" content="Ivan &amp; Aileen — We're Getting Married">
     <meta property="og:description" content="December 20, 2026 · 4:00 PM · Terrazas de Teodorra, Santa Rosa, Laguna">
-    <meta name="theme-color" content="#0b3d2e">
+    <meta name="theme-color" content="#fcfaf7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap">
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body class="locked">
 
     <!-- Cover -->
     <section id="cover" class="cover">
+        <div class="floral-cover-side floral-cover-left" aria-hidden="true"></div>
+        <div class="floral-cover-side floral-cover-right" aria-hidden="true"></div>
         <img src="./images/couple.jpg" alt="" class="cover-bg">
         <div class="cover-inner reveal-now">
             <p class="eyebrow">The Wedding of</p>
@@ -25,7 +31,8 @@
             <p class="wedding-tag">#IVANlastingLoveforAILEN</p>
             <div class="divider"><span></span><i>❦</i><span></span></div>
             <p class="cover-date">December 20, 2026</p>
-            <p class="guest-line" id="guest-line" hidden>Dear <strong id="guest-name"></strong>,<br>you are cordially invited</p>
+            <p class="guest-line" id="guest-line" hidden>Dear <strong id="guest-name"></strong>,<br>you are cordially
+                invited</p>
             <button id="open-btn" class="btn btn-gold">Open Invitation</button>
         </div>
     </section>
@@ -34,228 +41,276 @@
     <button id="music-btn" class="music-btn" aria-label="Pause music" hidden>♫</button>
 
     <div class="layout">
-    <!-- Desktop side panel -->
-    <aside class="side" aria-hidden="true">
-        <img src="./images/bg.jpg" alt="" class="side-bg">
-        <div class="side-card">
-            <p class="script" style="font-size:2.6rem">Ivan &amp; Aileen</p>
-            <p class="side-tag">#IVANlastingLoveforAILEN</p>
-            <p class="side-date">Sunday, December 20, 2026</p>
+        <!-- Desktop side panel -->
+        <aside class="side" aria-hidden="true">
+            <img src="./images/bg.jpg" alt="" class="side-bg">
+            <div class="side-card">
+                <p class="script" style="font-size:2.6rem">Ivan &amp; Aileen</p>
+                <p class="side-tag">#IVANlastingLoveforAILEN</p>
+                <p class="side-date">Sunday, December 20, 2026</p>
+            </div>
+        </aside>
+
+        <div class="column">
+            <!-- Decorative floral borders on sides of content column -->
+            <div class="floral-side-decor floral-decor-left" aria-hidden="true"></div>
+            <div class="floral-side-decor floral-decor-right" aria-hidden="true"></div>
+
+            <main id="main">
+                <!-- Hero -->
+                <header class="hero" id="home">
+                    <img src="./images/bg.jpg" alt="" class="hero-bg">
+                    <div class="hero-inner">
+                        <p class="script" style="font-size:2rem">Wedding Invitation</p>
+                        <div class="photo-ring"><img src="./images/couple.jpg" alt="Ivan and Aileen"
+                                style="object-position:center 42%"></div>
+                        <h2 class="script big">Ivan &amp; Aileen</h2>
+                        <p class="wedding-tag">#IVANlastingLoveforAILEN</p>
+                        <p class="hero-date">Sunday · December 20, 2026 · 4:00 PM</p>
+                        <a class="btn btn-outline btn-sm" id="calendar-btn" target="_blank" rel="noopener"
+                            href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ivan+%26+Aileen+Wedding&dates=20261220T080000Z/20261220T140000Z&location=Terrazas+de+Teodorra,+Brgy.+Dita,+City+of+Santa+Rosa,+Laguna&details=Wedding+of+Ivan+and+Aileen">
+                            📅 Save to Google Calendar
+                        </a>
+                        <div class="scroll-hint"><span></span><small>Scroll Down</small></div>
+                    </div>
+                    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+                        <path d="M0,64 C240,120 480,0 720,48 C960,96 1200,32 1440,64 L1440,120 L0,120 Z" />
+                    </svg>
+                </header>
+
+                <section class="section reveal">
+                    <p class="eyebrow">Together with their families</p>
+                    <p class="lead">we request the honor of your presence<br>as we unite in holy matrimony</p>
+                    <div class="divider"><span></span><i>❦</i><span></span></div>
+                    <div class="countdown" id="countdown">
+                        <div><b id="cd-d">0</b><small>Days</small></div>
+                        <div><b id="cd-h">0</b><small>Hours</small></div>
+                        <div><b id="cd-m">0</b><small>Minutes</small></div>
+                        <div><b id="cd-s">0</b><small>Seconds</small></div>
+                    </div>
+                </section>
+
+                <!-- Parents -->
+                <section class="section reveal" id="couple">
+                    <h3 class="title">With the Blessing of Our Parents</h3>
+                    <div class="grid-2">
+                        <div class="card">
+                            <p class="role">Parents of the Groom</p>
+                            <p>Felino H. Turla Jr.</p>
+                            <p>Maria Victoria Aurora L. Turla</p>
+                        </div>
+                        <div class="card">
+                            <p class="role">Parents of the Bride</p>
+                            <p>Renato B. Borbe</p>
+                            <p>Marivic B. Borbe</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Love Story -->
+                <section class="section reveal" id="story">
+                    <p class="eyebrow">Our Love Story</p>
+                    <h3 class="title">The Story of Aileen &amp; Ivan</h3>
+                    <p class="lead story-intro">Their love story began in the most unexpected place&mdash;a school,
+                        where playful teasing became the beginning of something beautiful.</p>
+
+                    <ol class="timeline">
+                        <li>
+                            <span class="tl-ico">✎</span>
+                            <p class="role">Playful Colleagues</p>
+                            <p>At first, Aileen and Ivan were simply colleagues who enjoyed teasing each other. Things
+                                took a turn when a fellow teacher created a group chat, which eventually led to their
+                                first meal together outside school. Back then, they were still part of a group, slowly
+                                getting to know one another.</p>
+                        </li>
+                        <li>
+                            <span class="tl-ico">✉</span>
+                            <p class="role">An Unexpected Message</p>
+                            <p>When Ivan finally reached out to Aileen through a personal message, their story began to
+                                unfold. Ivan started courting her, but Aileen was hesitant at first. With a five-year
+                                age gap between them&mdash;and Aileen being the older one&mdash;she wasn't entirely sure
+                                about the idea.</p>
+                        </li>
+                        <li>
+                            <span class="tl-ico">♥</span>
+                            <p class="role">A Heart That Said Yes</p>
+                            <p>But as time passed, their conversations grew longer, their laughter became more frequent,
+                                and they discovered that love was not about age, but about understanding, connection,
+                                and choosing each other.</p>
+                        </li>
+                    </ol>
+
+                    <div class="card birthdays">
+                        <p class="role">A Sweet Coincidence</p>
+                        <div class="bday-row">
+                            <div><b>Oct 24</b><small>Aileen</small></div>
+                            <i>&amp;</i>
+                            <div><b>Oct 25</b><small>Ivan</small></div>
+                        </div>
+                        <p>Their birthdays fall just a day apart. Born one day apart in the calendar, they found
+                            themselves sharing a love that would bring their lives together.</p>
+                    </div>
+
+                    <p class="story-text">What began with teasing, group hangouts, and simple conversations slowly grew
+                        into a love worth choosing every day. And now, the two colleagues who once barely knew each
+                        other are ready to begin their greatest adventure yet.</p>
+                    <p class="story-text">From schoolmates in the story of life to partners for a lifetime, Aileen and
+                        Ivan are about to say &ldquo;I do&rdquo;&mdash;proving that sometimes, the most beautiful love
+                        stories begin with a little teasing, an unexpected message, and a heart that learns to say yes.
+                    </p>
+                    <div class="divider"><span></span><i>❦</i><span></span></div>
+                    <p class="script story-quote">Two birthdays, one growing love, and a lifetime of tomorrows together.
+                    </p>
+                </section>
+
+                <!-- Gallery -->
+                <section class="section reveal" id="gallery">
+                    <p class="eyebrow">Captured Moments</p>
+                    <h3 class="title">Our Gallery</h3>
+                    <div class="gallery" id="gallery-grid"></div>
+                    <button type="button" class="btn btn-outline btn-sm" id="gallery-more">View All Photos</button>
+                </section>
+
+                <!-- Event -->
+                <section class="section reveal" id="event">
+                    <h3 class="title">Ceremony &amp; Reception</h3>
+                    <div class="card event">
+                        <div class="event-row"><span class="ico">✦</span>
+                            <div>
+                                <p class="role">Date</p>
+                                <p>Sunday, December 20, 2026</p>
+                            </div>
+                        </div>
+                        <div class="event-row"><span class="ico">✦</span>
+                            <div>
+                                <p class="role">Time</p>
+                                <p>4:00 in the afternoon</p>
+                            </div>
+                        </div>
+                        <div class="event-row"><span class="ico">✦</span>
+                            <div>
+                                <p class="role">Venue</p>
+                                <p>Terrazas de Teodorra<br>Brgy. Dita, City of Santa Rosa, Laguna</p>
+                            </div>
+                        </div>
+                        <iframe class="map" loading="lazy" title="Venue map"
+                            src="https://maps.google.com/maps?q=Terrazas%20de%20Teodorra%20Santa%20Rosa%20Laguna&output=embed"></iframe>
+                        <div class="nav-btns">
+                            <a class="btn btn-gold btn-sm" id="gmaps-btn" target="_blank" rel="noopener"
+                                href="https://www.google.com/maps/search/?api=1&query=Terrazas+de+Teodorra+Dita+Santa+Rosa+Laguna">📍
+                                Google Maps</a>
+                            <a class="btn btn-gold btn-sm" id="waze-btn" target="_blank" rel="noopener"
+                                href="https://waze.com/ul?q=Terrazas%20de%20Teodorra%20Santa%20Rosa%20Laguna&navigate=yes">🚗
+                                Waze</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sponsors -->
+                <section class="section reveal">
+                    <h3 class="title">Principal Sponsors</h3>
+                    <div class="card">
+                        <div class="sponsors" id="sponsors"></div>
+                    </div>
+                </section>
+
+                <!-- Entourage -->
+                <section class="section reveal" id="entourage">
+                    <h3 class="title">The Entourage</h3>
+                    <div class="grid-2">
+                        <div class="card">
+                            <p class="role">Best Man</p>
+                            <p>Daniel Landicho</p>
+                        </div>
+                        <div class="card">
+                            <p class="role">Maid of Honor</p>
+                            <p>Mariz B. Borbe</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p class="role">Secondary Sponsors</p>
+                        <dl class="pairs">
+                            <dt>Veil</dt>
+                            <dd>Noel B. Borbe &amp; Sarah O. Borbe</dd>
+                            <dt>Cord</dt>
+                            <dd>Marlon B. Borbe &amp; Noemi A. Borbe</dd>
+                            <dt>Candle</dt>
+                            <dd>Jan Michael B. Borbe &amp; Aliza Mae B. Borbe</dd>
+                            <dt>Oil</dt>
+                            <dd>Kristine L. Turla &amp; Avalon Kyle Dimagiba</dd>
+                            <dt>Bread &amp; Wine</dt>
+                            <dd>Krizztel Mae A. Baybay &amp; Allen Ramos</dd>
+                            <dt>Groomsman &amp; Bridesmaid</dt>
+                            <dd>John Earvin B. Hilario &amp; Isaiah Alviar</dd>
+                        </dl>
+                    </div>
+
+                    <div class="card">
+                        <p class="role">Little Ones</p>
+                        <dl class="pairs">
+                            <dt>Little Couple</dt>
+                            <dd>Aliyah A. Borbe &amp; Nash Samuel O. Borbe</dd>
+                            <dt>Here Comes the Bride</dt>
+                            <dd>Rafaelle O. Borbe &amp; Max Danielle Borbe</dd>
+                            <dt>Bible Bearers</dt>
+                            <dd>Ismaelle O. Borbe &amp; Yllona Anastasha Borbe</dd>
+                            <dt>Coin Bearers</dt>
+                            <dd>Sofia &amp; Damien D. Landicho</dd>
+                            <dt>Ring Bearers</dt>
+                            <dd>Elisha &amp; Skyler Rafael D. Landicho</dd>
+                        </dl>
+                    </div>
+
+                    <div class="card">
+                        <p class="role">Flower Girls</p>
+                        <ul class="flowers" id="flowers"></ul>
+                    </div>
+                </section>
+
+                <!-- RSVP -->
+                <section class="section reveal" id="rsvp">
+                    <h3 class="title">RSVP</h3>
+                    <p class="lead small">Kindly let us know if you can celebrate with us<br>on or before
+                        <strong>November 20, 2026</strong>.</p>
+                    <form class="card rsvp" id="rsvp-form" novalidate>
+                        <label for="rsvp-name">Full Name</label>
+                        <input id="rsvp-name" name="name" required maxlength="80" placeholder="Your name">
+
+                        <label>Will you attend?</label>
+                        <div class="choice">
+                            <input type="radio" id="rsvp-yes" name="attendance" value="Accepts" required>
+                            <label for="rsvp-yes">Joyfully Accepts</label>
+                            <input type="radio" id="rsvp-no" name="attendance" value="Declines">
+                            <label for="rsvp-no">Regretfully Declines</label>
+                        </div>
+
+                        <label for="rsvp-message">Message for the Couple <em>(optional)</em></label>
+                        <textarea id="rsvp-message" name="message" rows="3" maxlength="500"
+                            placeholder="Your wishes..."></textarea>
+
+                        <button type="submit" class="btn btn-gold" id="rsvp-submit">Send RSVP</button>
+                        <p class="form-status" id="rsvp-status" role="status"></p>
+                    </form>
+                </section>
+
+                <footer class="section footer">
+                    <p class="script big">Thank You</p>
+                    <p class="wedding-tag footer-tag">#IVANlastingLoveforAILEN</p>
+                    <p class="lead small">We can't wait to celebrate with you.</p>
+                    <p class="tiny">Ivan &amp; Aileen · 12.20.2026</p>
+                </footer>
+            </main>
+
+            <nav class="bottom-nav" aria-label="Sections">
+                <a href="#home" class="active"><span>⌂</span>Home</a>
+                <a href="#story"><span>♥</span>Story</a>
+                <a href="#gallery"><span>❖</span>Gallery</a>
+                <a href="#event"><span>✦</span>Venue</a>
+                <a href="#entourage"><span>❦</span>Entourage</a>
+                <a href="#rsvp"><span>✉</span>RSVP</a>
+            </nav>
         </div>
-    </aside>
-
-    <div class="column">
-    <main id="main">
-        <!-- Hero -->
-        <header class="hero" id="home">
-            <img src="./images/bg.jpg" alt="" class="hero-bg">
-            <div class="hero-inner">
-                <p class="script" style="font-size:2rem">Wedding Invitation</p>
-                <div class="photo-ring"><img src="./images/couple.jpg" alt="Ivan and Aileen" style="object-position:center 42%"></div>
-                <h2 class="script big">Ivan &amp; Aileen</h2>
-                <p class="wedding-tag">#IVANlastingLoveforAILEN</p>
-                <p class="hero-date">Sunday · December 20, 2026 · 4:00 PM</p>
-                <a class="btn btn-outline btn-sm" id="calendar-btn" target="_blank" rel="noopener"
-                   href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ivan+%26+Aileen+Wedding&dates=20261220T080000Z/20261220T140000Z&location=Terrazas+de+Teodorra,+Brgy.+Dita,+City+of+Santa+Rosa,+Laguna&details=Wedding+of+Ivan+and+Aileen">
-                    📅 Save to Google Calendar
-                </a>
-                <div class="scroll-hint"><span></span><small>Scroll Down</small></div>
-            </div>
-            <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64 C240,120 480,0 720,48 C960,96 1200,32 1440,64 L1440,120 L0,120 Z"/></svg>
-        </header>
-
-        <section class="section reveal">
-            <p class="eyebrow">Together with their families</p>
-            <p class="lead">we request the honor of your presence<br>as we unite in holy matrimony</p>
-            <div class="divider"><span></span><i>❦</i><span></span></div>
-            <div class="countdown" id="countdown">
-                <div><b id="cd-d">0</b><small>Days</small></div>
-                <div><b id="cd-h">0</b><small>Hours</small></div>
-                <div><b id="cd-m">0</b><small>Minutes</small></div>
-                <div><b id="cd-s">0</b><small>Seconds</small></div>
-            </div>
-        </section>
-
-        <!-- Parents -->
-        <section class="section reveal" id="couple">
-            <h3 class="title">With the Blessing of Our Parents</h3>
-            <div class="grid-2">
-                <div class="card">
-                    <p class="role">Parents of the Groom</p>
-                    <p>Felino H. Turla Jr.</p>
-                    <p>Maria Victoria Aurora L. Turla</p>
-                </div>
-                <div class="card">
-                    <p class="role">Parents of the Bride</p>
-                    <p>Renato B. Borbe</p>
-                    <p>Marivic B. Borbe</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Love Story -->
-        <section class="section reveal" id="story">
-            <p class="eyebrow">Our Love Story</p>
-            <h3 class="title">The Story of Aileen &amp; Ivan</h3>
-            <p class="lead story-intro">Their love story began in the most unexpected place&mdash;a school, where playful teasing became the beginning of something beautiful.</p>
-
-            <ol class="timeline">
-                <li>
-                    <span class="tl-ico">✎</span>
-                    <p class="role">Playful Colleagues</p>
-                    <p>At first, Aileen and Ivan were simply colleagues who enjoyed teasing each other. Things took a turn when a fellow teacher created a group chat, which eventually led to their first meal together outside school. Back then, they were still part of a group, slowly getting to know one another.</p>
-                </li>
-                <li>
-                    <span class="tl-ico">✉</span>
-                    <p class="role">An Unexpected Message</p>
-                    <p>When Ivan finally reached out to Aileen through a personal message, their story began to unfold. Ivan started courting her, but Aileen was hesitant at first. With a five-year age gap between them&mdash;and Aileen being the older one&mdash;she wasn't entirely sure about the idea.</p>
-                </li>
-                <li>
-                    <span class="tl-ico">♥</span>
-                    <p class="role">A Heart That Said Yes</p>
-                    <p>But as time passed, their conversations grew longer, their laughter became more frequent, and they discovered that love was not about age, but about understanding, connection, and choosing each other.</p>
-                </li>
-            </ol>
-
-            <div class="card birthdays">
-                <p class="role">A Sweet Coincidence</p>
-                <div class="bday-row">
-                    <div><b>Oct 24</b><small>Aileen</small></div>
-                    <i>&amp;</i>
-                    <div><b>Oct 25</b><small>Ivan</small></div>
-                </div>
-                <p>Their birthdays fall just a day apart. Born one day apart in the calendar, they found themselves sharing a love that would bring their lives together.</p>
-            </div>
-
-            <p class="story-text">What began with teasing, group hangouts, and simple conversations slowly grew into a love worth choosing every day. And now, the two colleagues who once barely knew each other are ready to begin their greatest adventure yet.</p>
-            <p class="story-text">From schoolmates in the story of life to partners for a lifetime, Aileen and Ivan are about to say &ldquo;I do&rdquo;&mdash;proving that sometimes, the most beautiful love stories begin with a little teasing, an unexpected message, and a heart that learns to say yes.</p>
-            <div class="divider"><span></span><i>❦</i><span></span></div>
-            <p class="script story-quote">Two birthdays, one growing love, and a lifetime of tomorrows together.</p>
-        </section>
-
-        <!-- Gallery -->
-        <section class="section reveal" id="gallery">
-            <p class="eyebrow">Captured Moments</p>
-            <h3 class="title">Our Gallery</h3>
-            <div class="gallery" id="gallery-grid"></div>
-            <button type="button" class="btn btn-outline btn-sm" id="gallery-more">View All Photos</button>
-        </section>
-
-        <!-- Event -->
-        <section class="section reveal" id="event">
-            <h3 class="title">Ceremony &amp; Reception</h3>
-            <div class="card event">
-                <div class="event-row"><span class="ico">✦</span><div><p class="role">Date</p><p>Sunday, December 20, 2026</p></div></div>
-                <div class="event-row"><span class="ico">✦</span><div><p class="role">Time</p><p>4:00 in the afternoon</p></div></div>
-                <div class="event-row"><span class="ico">✦</span><div><p class="role">Venue</p><p>Terrazas de Teodorra<br>Brgy. Dita, City of Santa Rosa, Laguna</p></div></div>
-                <iframe class="map" loading="lazy" title="Venue map"
-                    src="https://maps.google.com/maps?q=Terrazas%20de%20Teodorra%20Santa%20Rosa%20Laguna&output=embed"></iframe>
-                <div class="nav-btns">
-                    <a class="btn btn-gold btn-sm" id="gmaps-btn" target="_blank" rel="noopener"
-                       href="https://www.google.com/maps/search/?api=1&query=Terrazas+de+Teodorra+Dita+Santa+Rosa+Laguna">📍 Google Maps</a>
-                    <a class="btn btn-gold btn-sm" id="waze-btn" target="_blank" rel="noopener"
-                       href="https://waze.com/ul?q=Terrazas%20de%20Teodorra%20Santa%20Rosa%20Laguna&navigate=yes">🚗 Waze</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sponsors -->
-        <section class="section reveal">
-            <h3 class="title">Principal Sponsors</h3>
-            <div class="card">
-                <div class="sponsors" id="sponsors"></div>
-            </div>
-        </section>
-
-        <!-- Entourage -->
-        <section class="section reveal" id="entourage">
-            <h3 class="title">The Entourage</h3>
-            <div class="grid-2">
-                <div class="card"><p class="role">Best Man</p><p>Daniel Landicho</p></div>
-                <div class="card"><p class="role">Maid of Honor</p><p>Mariz B. Borbe</p></div>
-            </div>
-
-            <div class="card">
-                <p class="role">Secondary Sponsors</p>
-                <dl class="pairs">
-                    <dt>Veil</dt><dd>Noel B. Borbe &amp; Sarah O. Borbe</dd>
-                    <dt>Cord</dt><dd>Marlon B. Borbe &amp; Noemi A. Borbe</dd>
-                    <dt>Candle</dt><dd>Jan Michael B. Borbe &amp; Aliza Mae B. Borbe</dd>
-                    <dt>Oil</dt><dd>Kristine L. Turla &amp; Avalon Kyle Dimagiba</dd>
-                    <dt>Bread &amp; Wine</dt><dd>Krizztel Mae A. Baybay &amp; Allen Ramos</dd>
-                </dl>
-            </div>
-
-            <div class="card">
-                <p class="role">Groomsman &amp; Bridesmaid</p>
-                <p>John Earvin B. Hilario &amp; Isaiah Alviar</p>
-            </div>
-
-            <div class="card">
-                <p class="role">Little Ones</p>
-                <dl class="pairs">
-                    <dt>Little Couple</dt><dd>Aliyah A. Borbe &amp; Nash Samuel O. Borbe</dd>
-                    <dt>Here Comes the Bride</dt><dd>Rafaelle O. Borbe &amp; Max Danielle Borbe</dd>
-                    <dt>Bible Bearers</dt><dd>Ismaelle O. Borbe &amp; Yllona Anastasha Borbe</dd>
-                    <dt>Coin Bearers</dt><dd>Sofia &amp; Damien D. Landicho</dd>
-                    <dt>Ring Bearers</dt><dd>Elisha &amp; Skyler Rafael D. Landicho</dd>
-                </dl>
-            </div>
-
-            <div class="card">
-                <p class="role">Flower Girls</p>
-                <ul class="flowers" id="flowers"></ul>
-            </div>
-        </section>
-
-        <!-- RSVP -->
-        <section class="section reveal" id="rsvp">
-            <h3 class="title">RSVP</h3>
-            <p class="lead small">Kindly let us know if you can celebrate with us<br>on or before <strong>November 20, 2026</strong>.</p>
-            <form class="card rsvp" id="rsvp-form" novalidate>
-                <label for="rsvp-name">Full Name</label>
-                <input id="rsvp-name" name="name" required maxlength="80" placeholder="Your name">
-
-                <label>Will you attend?</label>
-                <div class="choice">
-                    <input type="radio" id="rsvp-yes" name="attendance" value="Accepts" required>
-                    <label for="rsvp-yes">Joyfully Accepts</label>
-                    <input type="radio" id="rsvp-no" name="attendance" value="Declines">
-                    <label for="rsvp-no">Regretfully Declines</label>
-                </div>
-
-                <div id="guests-wrap">
-                    <label for="rsvp-guests">Number of Guests (including you)</label>
-                    <select id="rsvp-guests" name="guests">
-                        <option>1</option><option>2</option><option>3</option><option>4</option>
-                    </select>
-                </div>
-
-                <label for="rsvp-message">Message for the Couple <em>(optional)</em></label>
-                <textarea id="rsvp-message" name="message" rows="3" maxlength="500" placeholder="Your wishes..."></textarea>
-
-                <button type="submit" class="btn btn-gold" id="rsvp-submit">Send RSVP</button>
-                <p class="form-status" id="rsvp-status" role="status"></p>
-            </form>
-        </section>
-
-        <footer class="section footer">
-            <p class="script big">Thank You</p>
-            <p class="wedding-tag footer-tag">#IVANlastingLoveforAILEN</p>
-            <p class="lead small">We can't wait to celebrate with you.</p>
-            <p class="tiny">Ivan &amp; Aileen · 12.20.2026</p>
-        </footer>
-    </main>
-
-    <nav class="bottom-nav" aria-label="Sections">
-        <a href="#home" class="active"><span>⌂</span>Home</a>
-        <a href="#story"><span>♥</span>Story</a>
-        <a href="#gallery"><span>❖</span>Gallery</a>
-        <a href="#event"><span>✦</span>Venue</a>
-        <a href="#entourage"><span>❦</span>Entourage</a>
-        <a href="#rsvp"><span>✉</span>RSVP</a>
-    </nav>
-    </div>
     </div>
 
     <!-- Lightbox -->
@@ -270,4 +325,5 @@
     <div class="petals" aria-hidden="true"></div>
     <script src="./script.js"></script>
 </body>
+
 </html>
