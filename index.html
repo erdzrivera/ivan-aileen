@@ -28,7 +28,7 @@
             <p class="eyebrow">The Wedding of</p>
             <div class="cover-photo"><img src="./images/couple.jpg" alt="Ivan and Aileen"></div>
             <h1 class="script">Ivan <span>&amp;</span> Aileen</h1>
-            <p class="wedding-tag">#IVANlastingLoveforAILEN</p>
+            <p class="wedding-verse">“Taste and see that the Lord is good”<br><span>Psalms 34:8a</span></p>
             <div class="divider"><span></span><i>❦</i><span></span></div>
             <p class="cover-date">December 20, 2026</p>
             <p class="guest-line" id="guest-line" hidden>Dear <strong id="guest-name"></strong>,<br>you are cordially
@@ -46,7 +46,7 @@
             <img src="./images/bg.jpg" alt="" class="side-bg">
             <div class="side-card">
                 <p class="script" style="font-size:2.6rem">Ivan &amp; Aileen</p>
-                <p class="side-tag">#IVANlastingLoveforAILEN</p>
+                <p class="side-verse">“Taste and see that the Lord is good”<br><span>Psalms 34:8a</span></p>
                 <p class="side-date">Sunday, December 20, 2026</p>
             </div>
         </aside>
@@ -65,7 +65,7 @@
                         <div class="photo-ring"><img src="./images/couple.jpg" alt="Ivan and Aileen"
                                 style="object-position:center 42%"></div>
                         <h2 class="script big">Ivan &amp; Aileen</h2>
-                        <p class="wedding-tag">#IVANlastingLoveforAILEN</p>
+                        <p class="wedding-verse">“Taste and see that the Lord is good”<br><span>Psalms 34:8a</span></p>
                         <p class="hero-date">Sunday · December 20, 2026 · 4:00 PM</p>
                         <a class="btn btn-outline btn-sm" id="calendar-btn" target="_blank" rel="noopener"
                             href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ivan+%26+Aileen+Wedding&dates=20261220T080000Z/20261220T140000Z&location=Terrazas+de+Teodorra,+Brgy.+Dita,+City+of+Santa+Rosa,+Laguna&details=Wedding+of+Ivan+and+Aileen">
@@ -243,6 +243,8 @@
                             <dd>Krizztel Mae A. Baybay &amp; Allen Ramos</dd>
                             <dt>Groomsman &amp; Bridesmaid</dt>
                             <dd>John Earvin B. Hilario &amp; Isaiah Alviar</dd>
+                            <dt>Guest of Honor</dt>
+                            <dd>Daniel Murillo</dd>
                         </dl>
                     </div>
 
@@ -268,11 +270,70 @@
                     </div>
                 </section>
 
+                <!-- Attire Guide -->
+                <section class="section reveal" id="attire">
+                    <h3 class="title">Wedding Attire Guide</h3>
+                    <p class="eyebrow" style="margin-bottom:.4rem">Elegant · Simple · Classic</p>
+                    <div class="card attire-card">
+                        <div class="attire-img-wrap">
+                            <img src="./images/attire-guide.jpg" alt="Wedding Attire Guide - Ivan &amp; Aileen"
+                                class="attire-img" id="attire-img">
+                            <button type="button" class="btn btn-outline btn-sm attire-zoom-btn" id="attire-zoom-btn">🔍
+                                View Full Image</button>
+                        </div>
+
+                        <!-- Attire Guide Breakdown -->
+                        <div class="attire-details">
+                            <div class="attire-group">
+                                <p class="attire-role">Female Guests</p>
+                                <p class="attire-desc">Cocktail / Midi or Maxi Dress</p>
+                                <div class="color-swatches">
+                                    <span class="swatch" style="background:#fbe7cb;" title="Cream"></span>
+                                    <span class="swatch" style="background:#bfd3c1;" title="Mint"></span>
+                                    <small>Cream / Mint</small>
+                                </div>
+                            </div>
+
+                            <div class="attire-group">
+                                <p class="attire-role">Male Guests</p>
+                                <p class="attire-desc">Long Sleeves / Polo &amp; Slacks</p>
+                                <div class="color-swatches">
+                                    <span class="swatch" style="background:#bfd3c1;" title="Mint"></span>
+                                    <span class="swatch" style="background:#9eb39f;" title="Sage Green"></span>
+                                    <small>Mint / Sage Green</small>
+                                </div>
+                            </div>
+
+                            <div class="attire-group">
+                                <p class="attire-role">Principal Sponsors</p>
+                                <p class="attire-desc">Emerald Green Gown / Barong &amp; Khaki Slacks</p>
+                                <div class="color-swatches">
+                                    <span class="swatch" style="background:#1b4d32;" title="Emerald Green"></span>
+                                    <span class="swatch" style="background:#b39d7b;" title="Khaki"></span>
+                                    <small>Emerald Green / Barong &amp; Khaki</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Important Note -->
+                        <div class="attire-note">
+                            <p class="role" style="color:var(--gold-accent)">Gentle Note</p>
+                            <p class="lead small" style="margin-bottom:0; font-size:.98rem">
+                                Please avoid wearing the reserved colors:<br>
+                                <strong>White, Ivory, Champagne, Emerald Green, Khaki, and Rose Gold</strong>.
+                            </p>
+                            <p class="script" style="font-size:1.8rem; margin-top:.4rem; color:var(--emerald-main)">
+                                Thank you!</p>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- RSVP -->
                 <section class="section reveal" id="rsvp">
                     <h3 class="title">RSVP</h3>
                     <p class="lead small">Kindly let us know if you can celebrate with us<br>on or before
-                        <strong>November 20, 2026</strong>.</p>
+                        <strong>November 20, 2026</strong>.
+                    </p>
                     <form class="card rsvp" id="rsvp-form" novalidate>
                         <label for="rsvp-name">Full Name</label>
                         <input id="rsvp-name" name="name" required maxlength="80" placeholder="Your name">
@@ -296,7 +357,8 @@
 
                 <footer class="section footer">
                     <p class="script big">Thank You</p>
-                    <p class="wedding-tag footer-tag">#IVANlastingLoveforAILEN</p>
+                    <p class="wedding-verse footer-verse">“Taste and see that the Lord is good”<br><span>Psalms
+                            34:8a</span></p>
                     <p class="lead small">We can't wait to celebrate with you.</p>
                     <p class="tiny">Ivan &amp; Aileen · 12.20.2026</p>
                 </footer>
@@ -307,7 +369,7 @@
                 <a href="#story"><span>♥</span>Story</a>
                 <a href="#gallery"><span>❖</span>Gallery</a>
                 <a href="#event"><span>✦</span>Venue</a>
-                <a href="#entourage"><span>❦</span>Entourage</a>
+                <a href="#attire"><span>👗</span>Attire</a>
                 <a href="#rsvp"><span>✉</span>RSVP</a>
             </nav>
         </div>

@@ -510,7 +510,42 @@ main { padding: 0 1.2rem 5rem; position: relative; z-index: 5; }
 .lb-count { position: absolute; bottom: 20px; font-family: var(--sans); font-size: .75rem; letter-spacing: .2em; color: rgba(255, 255, 255, 0.8); }
 @keyframes fade { from { opacity: 0; } }
 
-/* Hashtag Styling */
+/* Bible Verse Styling */
+.wedding-verse, .side-verse, .footer-verse {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--emerald-main);
+    line-height: 1.4;
+    text-align: center;
+}
+.wedding-verse {
+    font-size: 1.05rem;
+    margin: .4rem 0 .2rem;
+    opacity: .95;
+}
+.wedding-verse span, .side-verse span, .footer-verse span {
+    font-family: var(--sans);
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-size: .68rem;
+    color: var(--gold-accent);
+    display: inline-block;
+    margin-top: .2rem;
+    font-weight: 600;
+}
+.side-verse {
+    font-size: .95rem;
+    margin: -.1rem 0 .5rem;
+    opacity: .9;
+}
+.footer-verse {
+    font-size: 1.15rem;
+    color: var(--emerald-dark);
+    margin: .3rem 0 .9rem;
+}
+
+/* Hashtag Styling (fallback) */
 .wedding-tag {
     font-family: var(--sans);
     font-size: .82rem;
@@ -535,4 +570,86 @@ main { padding: 0 1.2rem 5rem; position: relative; z-index: 5; }
     color: var(--emerald-dark);
     margin: .2rem 0 .8rem;
     font-weight: 600;
+}
+
+/* Attire Guide Styling */
+.attire-card {
+    padding: 1.4rem 1.2rem;
+    text-align: center;
+}
+.attire-img-wrap {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fbf9f6;
+    border: 1px solid rgba(82, 121, 93, 0.2);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.2rem;
+}
+.attire-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.4s ease;
+}
+.attire-img:hover {
+    transform: scale(1.02);
+}
+.attire-zoom-btn {
+    margin: .8rem 0;
+    cursor: pointer;
+}
+.attire-details {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+    margin: 1.2rem 0;
+    text-align: left;
+}
+.attire-group {
+    background: rgba(253, 251, 249, 0.7);
+    border: 1px solid rgba(82, 121, 93, 0.15);
+    border-radius: 12px;
+    padding: .8rem 1rem;
+}
+.attire-role {
+    font-family: var(--sans);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--emerald-dark);
+    margin-bottom: .2rem;
+}
+.attire-desc {
+    font-size: .95rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-bottom: .4rem;
+}
+.color-swatches {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.swatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+.color-swatches small {
+    font-family: var(--sans);
+    font-size: .68rem;
+    letter-spacing: .1em;
+    color: var(--gold-accent);
+}
+.attire-note {
+    background: rgba(251, 247, 242, 0.95);
+    border: 1px dashed rgba(139, 125, 89, 0.5);
+    border-radius: 14px;
+    padding: 1.2rem 1rem;
+    margin-top: .6rem;
 }

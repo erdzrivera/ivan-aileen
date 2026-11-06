@@ -23,6 +23,7 @@ const SPONSORS = [
     ['Jan Michael De Leon', 'Mutya C. Reveche'],
     ['Roy M. Albino', 'Salvacion A. Albino'],
     ['Adonis B. Borbe', 'Mary Jane Berlon'],
+    ['Marion Laguerta', 'Rowena Pamela A. Dichoso'],
     ['', 'Susan Cosico'],
     ['', 'Josefina C. Laude'],
     ['', 'Maria Corazon Cecilia L. Landicho'],
@@ -184,7 +185,31 @@ const showLb = (i) => {
     [1, -1].forEach((d) => { new Image().src = `./images/gallery/full/${PHOTOS[(lbIndex + d + PHOTOS.length) % PHOTOS.length]}.jpg`; });
 };
 lbImg.addEventListener('load', () => lbImg.classList.add('loaded'));
-const openLb = (i) => { showLb(i); lb.hidden = false; document.body.classList.add('locked'); $('lb-close').focus(); };
+const openLb = (i) => {
+    $('lb-prev').style.display = '';
+    $('lb-next').style.display = '';
+    $('lb-count').style.display = '';
+    showLb(i);
+    lb.hidden = false;
+    document.body.classList.add('locked');
+    $('lb-close').focus();
+};
+const openSingleLb = (src, alt) => {
+    lbImg.classList.remove('loaded');
+    lbImg.src = src;
+    lbImg.alt = alt;
+    $('lb-prev').style.display = 'none';
+    $('lb-next').style.display = 'none';
+    $('lb-count').style.display = 'none';
+    lb.hidden = false;
+    document.body.classList.add('locked');
+    $('lb-close').focus();
+};
+
+const attireImg = $('attire-img');
+const attireBtn = $('attire-zoom-btn');
+if (attireImg) attireImg.addEventListener('click', () => openSingleLb('./images/attire-guide.jpg', 'Wedding Attire Guide'));
+if (attireBtn) attireBtn.addEventListener('click', () => openSingleLb('./images/attire-guide.jpg', 'Wedding Attire Guide'));
 const closeLb = () => { lb.hidden = true; document.body.classList.remove('locked'); };
 $('lb-close').addEventListener('click', closeLb);
 $('lb-prev').addEventListener('click', () => showLb(lbIndex - 1));
